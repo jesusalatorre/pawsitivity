@@ -83,6 +83,11 @@ button {
   border-radius: 25px;
 }
 
+@keyframes loginSwap{
+  from{background-color:#fbd183;}
+  to{background-color: #d06246;}
+
+}
 
 #join {
   font-size: 20px;
@@ -90,13 +95,32 @@ button {
   border: 3px solid #555;
   border-radius: 5px;
   padding: 5px 20px 5px 20px;
-  color:black;
+  background-color: #fbd183;
+  color:#555;
   text-decoration: none;
+  position: relative;
+  left:70px;
+  top: 10px;
+
 
 }
 #join:hover{
-  background-color: #fbd183;
-  border: 3px solid #d06246;
+  animation-name: loginSwap;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+.logo{
+  height: 70px;
+  width: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#title{
+  font-family: 'Roboto', sans-serif;
 }
 
 #container-logout {
