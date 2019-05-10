@@ -20,13 +20,17 @@ div {
   padding: 40px 50px;
 }
 
-#container-form {
+.card {
   width: 400px;
   background: #ffffff;
   margin: auto;
   border-radius: 6px;
   padding: 40px 50px;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+#container-form {
+
 }
 
 .input_wrap {
@@ -74,7 +78,7 @@ button {
   height: 50px;
   margin: 10px 0;
   background: #a64bf4;
-  background: -webkit-linear-gradient(left, #21d4fd, #b721ff);;
+  background: -webkit-linear-gradient(left, #d06246, #fbd183);;
   border: none;
   border-radius: 25px;
 }
@@ -118,4 +122,36 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.side-navigation {
+  height: 100vh;
+  position: fixed;
+}
+
+.main-content {
+  /* padding-left: 420px; */
+  height: 200vh;
+}
+
+.animal-type {
+  height: calc(100vh / 4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animal-type button {
+  all: initial;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-container .card {
+  width: 400;
+  margin: 10px;
 }
