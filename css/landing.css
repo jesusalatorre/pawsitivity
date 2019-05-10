@@ -83,7 +83,7 @@ button {
   border-radius: 25px;
 }
 
-@keyframes loginSwap{
+@keyframes joinSwap{
   from{background-color:#fbd183;}
   to{background-color: #d06246;}
 
@@ -105,6 +105,34 @@ button {
 
 }
 #join:hover{
+  animation-name: joinSwap;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+}
+
+@keyframes loginSwap{
+  from{background-color:#dae9f2;}
+  to{background-color: #fbd183;}
+
+}
+
+#loginbutton {
+  font-size: 20px;
+  text-align: center;
+  border: 3px solid #555;
+  border-radius: 5px;
+  padding: 5px 20px 5px 20px;
+  background-color: #dae9f2;
+  color:#555;
+  text-decoration: none;
+  position: relative;
+  left:70px;
+  top: 10px;
+
+
+}
+#loginbutton:hover{
   animation-name: loginSwap;
   animation-duration: 1s;
   animation-direction: alternate;
@@ -141,6 +169,12 @@ button {
   height: 100vh;
   width: 100vw;
   background-image: url('../images/dog-cover.jpg');
+}
+
+.signup-cover {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../images/dog-cover2.jpg');
 }
 
 .login {
