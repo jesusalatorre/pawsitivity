@@ -84,10 +84,19 @@ button {
 }
 
 
-#signup_option {
-  font-size: 13px;
+#join {
+  font-size: 20px;
   text-align: center;
-  margin: 5px 0 0 0;
+  border: 3px solid #555;
+  border-radius: 5px;
+  padding: 5px 20px 5px 20px;
+  color:black;
+  text-decoration: none;
+
+}
+#join:hover{
+  background-color: #fbd183;
+  border: 3px solid #d06246;
 }
 
 #container-logout {
@@ -157,7 +166,6 @@ button {
 }
 
 .pet-profile-container {
-  /* width: 100%; */
   border-radius: 6px;
 }
 
