@@ -12,7 +12,7 @@ $('#login_button').on('click', function(){
   json_to_send = JSON.stringify(json_to_send);
 
   $.ajax({
-    url: '',
+    url: 'https://pawsitivity-web-api.herokuapp.com/users/login',
     // url: 'https://tuapp.herokuapp.com/users/login',
     headers: {
         'Content-Type':'application/json'
@@ -23,7 +23,7 @@ $('#login_button').on('click', function(){
     success: function(data){
       // guardar token en localstorage o cookie
       localStorage.setItem('token', data.token)
-      window.location = './todo.html'
+      window.location = './catalog.html'
     },
     error: function(error_msg) {
       alert((error_msg["responseText"]));
