@@ -78,7 +78,7 @@ button {
   height: 50px;
   margin: 10px 0;
   background: #a64bf4;
-  background: -webkit-linear-gradient(left, #d06246, #fbd183);;
+  background: -webkit-linear-gradient(left, #d06246, #fbd183);
   border: none;
   border-radius: 25px;
 }
@@ -154,4 +154,14 @@ button {
 .card-container .card {
   width: 400;
   margin: 10px;
+}
+
+.pet-profile-container {
+  /* width: 100%; */
+  border-radius: 6px;
+}
+
+.pet-full-card {
+  display: none;
+  padding: 40px 0;
 }
