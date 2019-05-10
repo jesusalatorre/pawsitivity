@@ -3,31 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title>Pawsitivity</title>
-    <link rel="stylesheet" href="https://raw.githubusercontent.com/cdnjs/cdnjs/master/ajax/libs/skeleton/1.2/skeleton.min.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css">
     <link rel="stylesheet" type="text/css" href="css/landing.css"
   </head>
   <body>
     <section>
-      <nav class="navigation">
-        <div class="logo">
-          <img src="" alt="">
-        </div>
-      </nav>
-      <section id="login">
-        <div id=container-form>
-          <div id="form">
-            <h1>Login</h1>
-            <div class="input_wrap">
-              <input id="email" type="text" name="email" placeholder="email">
+      <div class="landing">
+        <nav class="navigation container">
+          <div class="four columns logo">
+            Logo here
+          </div>
+          <div class="four columns text-center">
+            <h3>Pawsitivity</h3>
+          </div>
+          <div class="four columns" id=signup_option>
+            <a href="signup.html">Algo más</a>
+          </div>
+        </nav>
+        <div style="height: 100%; width: 100%;">
+          <div class="five columns text-center splash-message">
+            <div class="container">
+              <h3> At Pawsitivity, we are committed to helping pets find loving partners and homes. Because they deserve a loving companion, and so do you.</h3>
             </div>
-            <div class="input_wrap">
-              <input id="password" type="text" name="" placeholder="password">
+          </div>
+          <div class="seven columns login">
+            <div id=container-form>
+              <div id="form">
+                <h1>Login</h1>
+                <div class="input_wrap">
+                  <input id="email" type="text" name="email" placeholder="email">
+                </div>
+                <div class="input_wrap">
+                  <input id="password" type="text" name="" placeholder="password">
+                </div>
+                <button id="login_button"> Login </button>
+              </div>
             </div>
-            <button id="login_button"> Login </button>
-            <div id="signup_option"><a href="signup.html">Sign up</a></div>
           </div>
         </div>
-      </section>
+      </div>
     </section>
     <script src="js/lib/jquery.js" type="text/javascript"></script>
     <!---  Aqui metemos los demas scripts  --->
