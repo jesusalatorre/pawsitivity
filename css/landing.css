@@ -147,12 +147,41 @@ button {
   margin-right: auto;
 }
 
+
 #title{
   font-family: 'Roboto', sans-serif;
 }
 
 #container-logout {
   float: right;
+}
+
+#select-dogs{
+    background-image: url('../images/dog-button.jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+#select-cats{
+    background-image: url('../images/cat-button.jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+#select-other{
+    background-image: url('../images/other-button.jpg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.top-nav-item{
+  margin-left:30px;
+}
+
+.animal-title{
+  color:white;
+  font-weight: bold;
 }
 
 .navigation {
@@ -201,11 +230,25 @@ button {
   height: 200vh;
 }
 
+@keyframes transp{
+  from{opacity:1;}
+  to{opacity: .8;}
+
+}
+
 .animal-type {
   height: calc(100vh / 4);
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+
+.animal-type:hover{
+  animation-name: transp;
+  animation-duration: .5s;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
 }
 
 .animal-type button {
