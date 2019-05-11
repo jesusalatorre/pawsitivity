@@ -7,7 +7,7 @@ $('#addpet_button').on('click', function(){
 	var age = document.querySelector('#pet_age').value
 	var sterilized = document.getElementById("pet_sterilization").checked
 	var photo = document.querySelector('#pet_photo').value
-	
+
 	var json_to_send = {
     "name": name,
     "animalType" : type,
@@ -45,7 +45,8 @@ function loadPetTypes() {
 	let new_html = ""
 	let petTypes = [
 		"Dog",
-		"Cat"
+		"Cat",
+		"Other"
 	]
 	new_html+= `
 			<option value= "-1" class="hide_option" selected="selected">
