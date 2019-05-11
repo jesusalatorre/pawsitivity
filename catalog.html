@@ -8,48 +8,57 @@
     <link rel="stylesheet" type="text/css" href="css/landing.css">
   </head>
   <body>
+    <nav class="navigation container">
+      <div class="two columns">
+        <a href="signup.html" class="button top-nav-item" id="create-listing">Create Listing</a>
+      </div>
+      <div class="two columns">
+        <a href="signup.html" class="button top-nav-item" id="my-listings">My Listings</a>
+      </div>
+      <div class="two columns">
+        <a href="signup.html" class="button top-nav-item" id="logout">Logout</a>
+      </div>
+    </nav>
     <section class="three columns side-navigation">
       <nav>
-        <h4>Choose your fighter</h4>
-        <div class="animal-type">
-          <button type="submit">Animal Name</button>
+        <div>
+          <img class="logo" src="images/paw-logo.png">
         </div>
-        <div class="animal-type">
-          <button type="submit">Animal Name</button>
+        <div class="animal-type button"  id="select-dogs">
+          <button type="submit" class="animal-select"><h1 class="animal-title">Dogs</h1></button>
         </div>
-        <div class="animal-type">
-          <button type="submit">Animal Name</button>
+        <div class="animal-type button"  id="select-cats">
+          <button type="submit" class="animal-select"><h1 class="animal-title">Cats</h1></button>
         </div>
-        <div class="animal-type">
-          <button type="submit">Animal Name</button>
+        <div class="animal-type button" id="select-other">
+          <button type="submit" class="animal-select"><h1 class="animal-title">Other</h1></button>
         </div>
       </nav>
     </section>
     <section class="nine columns main-content offset-by-three">
       <div class=" text-center">
-        <h1>Your dog catalog</h1>
         <div class="card-container">
           <div class="pet-profile-container">
-            <div class="card text-center">
-              <h4>Firuláis</h4>
-              <img src="https://via.placeholder.com/300x200" alt="">
-              <p>alguna descripción</p>
-              <button class="show-full-card">Ver detalle</button>
-            </div>
-            <div class="pet-full-card" style="background: #fffdea; color:#171717;">
-              <div class="container">
-                <div class="six columns">
+                <div class="card text-center">
                   <h4>Firuláis</h4>
                   <img src="https://via.placeholder.com/300x200" alt="">
+                  <p>alguna descripción</p>
+                  <button class="show-full-card">Ver detalle</button>
                 </div>
-                <div class="six columns">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic veniam, ex? In debitis iure reiciendis optio sapiente, numquam modi iusto illo ducimus eaque odit vitae, consequuntur voluptates. Adipisci, sapiente, recusandae.</p>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, tempore! Inventore laudantium iusto deserunt non officia, consequuntur aut necessitatibus, sapiente officiis incidunt fugit consequatur omnis facere ipsam porro doloribus dolores!</p>
-                  <button>Adoptar!</button>
+                <div class="pet-full-card" style="background: #fffdea; color:#171717;">
+                  <div class="container">
+                    <div class="six columns">
+                      <h4>Firuláis</h4>
+                      <img src="https://via.placeholder.com/300x200" alt="">
+                    </div>
+                    <div class="six columns">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic veniam, ex? In debitis iure reiciendis optio sapiente, numquam modi iusto illo ducimus eaque odit vitae, consequuntur voluptates. Adipisci, sapiente, recusandae.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit, tempore! Inventore laudantium iusto deserunt non officia, consequuntur aut necessitatibus, sapiente officiis incidunt fugit consequatur omnis facere ipsam porro doloribus dolores!</p>
+                      <button>Adoptar!</button>
+                    </div>
+                    <div class="close-card" id="close-full-card">X</div>
+                  </div>
                 </div>
-                <div class="close-card" id="close-full-card">X</div>
-              </div>
-            </div>
           </div>
           <div class="pet-profile-container">
             <div class="card text-center">
