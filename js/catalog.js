@@ -60,16 +60,50 @@ function loadPets() {
 
       for( let i = 0; i < data.length; i++) {
         // aqui va su código para agregar los elementos de la lista
-        console.log(data[i].description)
+        console.log(data[i])
         // algo asi:
         // addTodo(data[i]._id, data[i].description, data[i].completed)
-        addTodo(data[i]._id, data[i].description, data[i].completed)
+        //addPet(data[i]._id, data[i].description, data[i].completed)
+        loadCard(data[i].name, data[i].animalType, data[i].breed, data[i].specialCare, data[i].sterilization, data[i].createdBy, "Monterrey")
       }
     },
     error: function(error_msg) {
       alert((error_msg['responseText']));
     }
   });
+}
+
+function loadCard(petName, petType, petBreed, petAge, petSpecialCare, petSterilized, petOwner, petLocation){
+  let new_html=""
+
+  new_html += `
+  <div class="pet-profile-container">
+        <div class="card text-center">
+          <h4>${petName}</h4>
+          <img src="https://via.placeholder.com/300x200" alt="">
+          <p>${petType}, ${petBreed}</p>
+          <button class="show-full-card button pet-gradient">Ver detalle</button>
+        </div>
+        <div class="pet-full-card" style="background: #fffdea; color:#171717;">
+          <div class="container">
+            <div class="six columns">
+              <h4>Firuláis</h4>
+              <img src="https://via.placeholder.com/300x200" alt="">
+            </div>
+            <div class="six columns">
+              <p>Age: ${petAge}</p>
+              <p>Requires Special Care?: ${petSpecialCare}</p>
+              <p>Spayed/Newtered?: ${petSterilized}</p>
+              <p>Current Owner: ${petOwner}</p>
+              <p>Location: ${petLocation}</p>
+            </div>
+            <div class="close-card" id="close-full-card">X</div>
+          </div>
+        </div>
+  </div>
+  `
+  $("#card-container").append(new_html);
+
 }
 
 loadPets()

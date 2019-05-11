@@ -94,6 +94,10 @@ button {
   background: -webkit-linear-gradient(left, #fffdea, #fbd183);
 }
 
+.pet-gradient{
+    background: -webkit-linear-gradient(left, #dae9f2, #fffdea);
+}
+
 @keyframes joinSwap{
   from{background-color:#fbd183;}
   to{background-color: #d06246;}
