@@ -3,7 +3,30 @@ if (token) {
   token = token.replace(/^"(.*)"$/, '$1'); // Remove quotes from token start/end.
 }
 
-//Funcion que se encarga de mostrar el "perfil" del animal
+
+$('#select-cats').on('click', function() {
+  $('.Dog-profile').css({'display': 'none'});
+  $('.Other-profile').css({'display': 'none'});
+  $('.Cat-profile').css({'display': 'block'});
+})
+
+$('#select-dogs').on('click', function() {
+  $('.Dog-profile').css({'display': 'block'});
+  $('.Other-profile').css({'display': 'none'});
+  $('.Cat-profile').css({'display': 'none'});
+})
+
+$('#select-other').on('click', function() {
+  $('.Dog-profile').css({'display': 'none'});
+  $('.Other-profile').css({'display': 'block'});
+  $('.Cat-profile').css({'display': 'none'});
+})
+
+function selectAll(){
+  $('.Dog-profile').css({'display': 'block'});
+  $('.Other-profile').css({'display': 'block'});
+  $('.Cat-profile').css({'display': 'block'});
+}
 
 function openCard(elem){
     const petFullCard = $(elem).parent().next();
@@ -50,7 +73,7 @@ function loadCard(petName, petType, petBreed, petAge, petSpecialCare, petSterili
   let new_html=""
 
   new_html += `
-  <div class="pet-profile-container">
+  <div class="pet-profile-container ${petType}-profile" >
         <div class="card text-center">
           <h4>${petName}</h4>
           <img src="${petPicture}" alt="https://via.placeholder.com/300x200">

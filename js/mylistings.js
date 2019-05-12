@@ -58,6 +58,7 @@ function updatePet(id ,fields) {
       data: json_to_send,
       success: function(data){
         console.log("UPDATE!!")
+        location.reload()
       },
       error: function(error_msg) {
         alert((error_msg['responseText']));
