@@ -12,7 +12,6 @@ $('#addpet_button').on('click', function(){
 	var age = parseInt(document.getElementById('pet_age').value)
 	var sterilized = document.getElementById("pet_sterilization").checked
 	var photo = document.getElementById('pet_photo')
-
   var fReader = new FileReader();
   fReader.readAsDataURL(photo.files[0])
   fReader.onload = function(picBuffer) {
@@ -40,8 +39,7 @@ $('#addpet_button').on('click', function(){
     console.log("hola")
 
     $.ajax({
-      url: 'http://localhost:3000/pets/',
-      //'https://pawsitivity-web-api.herokuapp.com/pets/',
+      url: 'https://pawsitivity-web-api.herokuapp.com/pets/',
       // url: 'https://tuapp.herokuapp.com/users/login',
       headers: {
           'Content-Type':'application/json',
@@ -68,7 +66,7 @@ function loadPetTypes() {
 	let petTypes = [
 		"Dog",
 		"Cat",
-    "Other"
+		"Other"
 	]
 	new_html+= `
 			<option value= "-1" class="hide_option" selected="selected">

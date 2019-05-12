@@ -33,10 +33,18 @@ div {
   opacity: .8;
 }
 
+.not-as-transparent{
+  opacity:.95;
+}
+
 .input_wrap {
   padding: 10px 0 0 0;
   margin-bottom: 35px;
   border-bottom: 2px solid #adadad;
+}
+
+.no-bottom-border{
+  border-bottom: none;
 }
 
 .input_wrap_sel {
@@ -53,7 +61,6 @@ input:focus::placeholder {
 
 input {
   height: 45px;
-  width: 100%;
   background: transparent;
   display: block;
   /*padding: 0 5px 0 45px;*/
@@ -83,10 +90,27 @@ button {
   border-radius: 25px;
 }
 
+.golden-gradient{
+  background: -webkit-linear-gradient(left, #fffdea, #fbd183);
+}
+
+.pet-gradient{
+    background: -webkit-linear-gradient(left, #dae9f2, #fffdea);
+}
+
+.x-color{
+  background: #6f0c0c;
+  color:#fffdea;
+}
+
 @keyframes joinSwap{
   from{background-color:#fbd183;}
   to{background-color: #d06246;}
 
+}
+
+.pet-editor{
+  display: inline-block;
 }
 
 #join {
@@ -148,6 +172,7 @@ button {
 }
 
 
+
 #title{
   font-family: 'Roboto', sans-serif;
 }
@@ -204,6 +229,16 @@ button {
   height: 100vh;
   width: 100vw;
   background-image: url('../images/dog-cover2.jpg');
+}
+
+.register-pet-cover{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../images/register-pet.jpg');
+}
+
+#pet-pet_specialCare{
+  width:10%;
 }
 
 .login {
@@ -276,10 +311,10 @@ button {
   background-color: #dae9f2;
 }
 
-.close-card {
+.close-full-card {
   height: 10px;
   width: 10px;
   position: absolute;
-  right: -100px;
+  right: -90px;
   top: 0;
 }

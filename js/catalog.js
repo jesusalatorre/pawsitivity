@@ -3,46 +3,45 @@ if (token) {
   token = token.replace(/^"(.*)"$/, '$1'); // Remove quotes from token start/end.
 }
 
-//Funcion que se encarga de mostrar el "perfil" del animal
-$(document).ready(function () {
-  $('.show-full-card').on('click', function () {
-    const petFullCard = $(this).parent().next();
-    const petProfileContainer = $(this).parent().parent();
+
+$('#select-cats').on('click', function() {
+  $('.Dog-profile').css({'display': 'none'});
+  $('.Other-profile').css({'display': 'none'});
+  $('.Cat-profile').css({'display': 'block'});
+})
+
+$('#select-dogs').on('click', function() {
+  $('.Dog-profile').css({'display': 'block'});
+  $('.Other-profile').css({'display': 'none'});
+  $('.Cat-profile').css({'display': 'none'});
+})
+
+$('#select-other').on('click', function() {
+  $('.Dog-profile').css({'display': 'none'});
+  $('.Other-profile').css({'display': 'block'});
+  $('.Cat-profile').css({'display': 'none'});
+})
+
+function selectAll(){
+  $('.Dog-profile').css({'display': 'block'});
+  $('.Other-profile').css({'display': 'block'});
+  $('.Cat-profile').css({'display': 'block'});
+}
+
+function openCard(elem){
+    const petFullCard = $(elem).parent().next();
+    const petProfileContainer = $(elem).parent().parent();
     $(petProfileContainer).css({'width': '100%'});
     $(petFullCard).css({'display': 'block'});
-  })
+}
 
+function closeCard(elem){
   $('.close-full-card').on('click', () => {
     $('.pet-profile-container').css({'width': '420px'});
     $('.pet-full-card').css({'display': 'none'});
   })
-});
-
-
-function updateTodo(id, completed) {
-  console.log(completed)
-  json_to_send = {
-    "completed" : completed
-  };
-  json_to_send = JSON.stringify(json_to_send);
-  $.ajax({
-      url: 'https://examenwebjesus.herokuapp.com/todos' + id,
-      // url: 'https://tuapp.herokuapp.com/todos',
-      headers: {
-          'Content-Type':'application/json',
-          'Authorization': 'Bearer ' + token
-      },
-      method: 'PATCH',
-      dataType: 'json',
-      data: json_to_send,
-      success: function(data){
-        console.log("UPDATE!!")
-      },
-      error: function(error_msg) {
-        alert((error_msg['responseText']));
-      }
-    });
 }
+
 
 
 function loadPets() {
@@ -60,16 +59,47 @@ function loadPets() {
 
       for( let i = 0; i < data.length; i++) {
         // aqui va su código para agregar los elementos de la lista
-        console.log(data[i].description)
-        // algo asi:
-        // addTodo(data[i]._id, data[i].description, data[i].completed)
-        addTodo(data[i]._id, data[i].description, data[i].completed)
+        console.log(data[i])
+        loadCard(data[i].name, data[i].animalType, data[i].breed, data[i].age, data[i].specialCare, data[i].sterilization, "Monterrey", data[i].ownerEmail)
       }
     },
     error: function(error_msg) {
       alert((error_msg['responseText']));
     }
   });
+}
+
+function loadCard(petName, petType, petBreed, petAge, petSpecialCare, petSterilized, petLocation, petEmail, petPicture){
+  let new_html=""
+
+  new_html += `
+  <div class="pet-profile-container ${petType}-profile" >
+        <div class="card text-center">
+          <h4>${petName}</h4>
+          <img src="${petPicture}" alt="https://via.placeholder.com/300x200">
+          <p>${petType}, ${petBreed}</p>
+          <button class="show-full-card button" onclick="openCard(this)" style="background:#dae9f2;">Ver detalle</button>
+        </div>
+        <div class="pet-full-card" style="background: #d06246; color:#171717;">
+          <div class="container">
+            <div class="six columns">
+              <h4>${petName}</h4>
+              <img src="${petPicture}" alt="https://via.placeholder.com/300x200">
+            </div>
+            <div class="six columns">
+              <p>Age: ${petAge}</p>
+              <p>Requires Special Care: ${petSpecialCare}</p>
+              <p>Spayed/Newtered: ${petSterilized}</p>
+              <p>Location: ${petLocation}</p>
+              <p>Contact: ${petEmail}</p>
+            </div>
+            <div class="close-full-card"><button class="button x-color" onclick="closeCard(this)">X</button></div>
+          </div>
+        </div>
+  </div>
+  `
+  $("#card-container").append(new_html);
+
 }
 
 loadPets()
