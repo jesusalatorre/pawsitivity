@@ -98,10 +98,19 @@ button {
     background: -webkit-linear-gradient(left, #dae9f2, #fffdea);
 }
 
+.x-color{
+  background: #6f0c0c;
+  color:#fffdea;
+}
+
 @keyframes joinSwap{
   from{background-color:#fbd183;}
   to{background-color: #d06246;}
 
+}
+
+.pet-editor{
+  display: inline-block;
 }
 
 #join {
@@ -162,7 +171,10 @@ button {
   margin-right: auto;
 }
 
-
+.deleter{
+  color:white;
+  background-color: #6f0c0c;
+}
 
 
 #title{
@@ -303,10 +315,10 @@ button {
   background-color: #dae9f2;
 }
 
-.close-card {
+.close-full-card {
   height: 10px;
   width: 10px;
   position: absolute;
-  right: -100px;
+  right: -90px;
   top: 0;
 }
