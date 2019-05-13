@@ -177,8 +177,8 @@ button {
 }
 
 .catalog-logo{
-  height: 70px;
-  width: 70px;
+  height: 90px;
+  width: 90px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -314,7 +314,7 @@ button {
   animation-iteration-count: 2;
 }
 
-.logo:hover{
+.catalog-logo:hover{
   animation-name: transp1;
   animation-duration: .5s;
   animation-direction: alternate;
