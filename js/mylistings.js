@@ -113,7 +113,7 @@ function loadCard(petName, petType, petBreed, petAge, petSpecialCare, petSterili
   <div class="pet-profile-container" id="${petID}">
         <div class="card text-center">
           <h4>${petName}</h4>
-          <img src="" alt="https://via.placeholder.com/300x200">
+          <img src="https://pawsitivity-web-api.herokuapp.com/pets/${petID}/pic" alt="https://via.placeholder.com/300x200">
           <p>${petType}, ${petBreed}</p>
           <button class="show-full-card button" onclick="openCard(this)" style="background:#dae9f2;">Ver detalle</button>
         </div>
