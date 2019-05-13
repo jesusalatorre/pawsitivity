@@ -32,7 +32,7 @@ function loadMyPets() {
       for( let i = 0; i < pets.length; i++) {
         // aqui va su código para agregar los elementos de la lista
         console.log(pets[i])
-        loadCard(pets[i].name, pets[i].animalType, pets[i].breed, pets[i].age, pets[i].specialCare, pets[i].sterilization, "Monterrey", pets[i].ownerEmail, pets[i]._id)
+        loadCard(pets[i].name, pets[i].animalType, pets[i].breed, pets[i].age, pets[i].specialCare, pets[i].sterilization, pets[i].location, pets[i].ownerEmail, pets[i]._id)
       }
     },
     error: function(error_msg) {

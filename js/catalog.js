@@ -60,7 +60,7 @@ function loadPets() {
       for( let i = 0; i < data.length; i++) {
         // aqui va su código para agregar los elementos de la lista
         console.log(data[i])
-        loadCard(data[i].name, data[i].animalType, data[i].breed, data[i].age, data[i].specialCare, data[i].sterilization, "Monterrey", data[i].ownerEmail, data[i]._id)
+        loadCard(data[i].name, data[i].animalType, data[i].breed, data[i].age, data[i].specialCare, data[i].sterilization, data[i].location, data[i].ownerEmail, data[i]._id)
       }
     },
     error: function(error_msg) {
