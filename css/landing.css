@@ -164,14 +164,20 @@ button {
 }
 
 .logo{
-  height: 90px;
-  width: 90px;
+  height: 70px;
+  width: 70px;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-
+.catalog-logo{
+  height: 70px;
+  width: 70px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 #title{
   font-family: 'Roboto', sans-serif;
@@ -223,20 +229,12 @@ button {
   height: 100vh;
   width: 100vw;
   background-image: url('../images/dog-cover.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .signup-cover {
   height: 100vh;
   width: 100vw;
   background-image: url('../images/dog-cover2.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .register-pet-cover{
@@ -244,9 +242,6 @@ button {
   width: 100vw;
   background-image: url('../images/register-pet.jpg');
   background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .listings-cover{
