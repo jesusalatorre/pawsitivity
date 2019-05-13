@@ -237,6 +237,15 @@ button {
   background-image: url('../images/register-pet.jpg');
 }
 
+.listings-cover{
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../images/pug-cover.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 #pet-pet_specialCare{
   width:10%;
 }
@@ -262,7 +271,7 @@ button {
 
 .main-content {
   /* padding-left: 420px; */
-  height: 200vh;
+  height: 100vh;
 }
 
 @keyframes transp{
