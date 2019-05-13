@@ -11,47 +11,54 @@ $('#addpet_button').on('click', function(){
   var specialCare = document.getElementById("pet_specialCare").checked
 	var age = parseInt(document.getElementById('pet_age').value)
 	var sterilized = document.getElementById("pet_sterilization").checked
-	var photo = document.querySelector('#pet_photo').value
-
-
-  if (breed.length == 0){
-    breed = "unknown"
-  }
-	
-	var json_to_send = {
-    "name": name,
-    "animalType" : type,
-    "breed" : breed,
-    "specialCare" : specialCare,
-    "age" : age,
-    "sterilization" : sterilized,
-    "image_path" : photo
-  };
-
-  json_to_send = JSON.stringify(json_to_send);
-
-  console.log(json_to_send)
-
-  $.ajax({
-    url: 'https://pawsitivity-web-api.herokuapp.com/pets/',
-    // url: 'https://tuapp.herokuapp.com/users/login',
-    headers: {
-        'Content-Type':'application/json',
-        'Authorization': 'Bearer ' + token
-    },
-    method: 'POST',
-    dataType: 'json',
-    data: json_to_send,
-    success: function(data){
-      // guardar token en localstorage o cookie
-      alert("Pet registered!")
-      console.log('success: '+ data);
-      window.location = './catalog.html'
-    },
-    error: function(error_msg) {
-      alert((error_msg["responseText"]));
+	var photo = document.getElementById('pet_photo')
+  var fReader = new FileReader();
+  fReader.readAsDataURL(photo.files[0])
+  fReader.onload = function(picBuffer) {
+  
+    if (breed.length == 0){
+      breed = "unknown"
     }
-  });
+
+    var strBufferImage = picBuffer.target.result
+    strBufferImage=strBufferImage.substr(strBufferImage.search(',')+1)
+
+  	var json_to_send = {
+      "name": name,
+      "animalType" : type,
+      "breed" : breed,
+      "specialCare" : specialCare,
+      "age" : age,
+      "sterilization" : sterilized,
+      "image_path" : strBufferImage
+    };
+
+    json_to_send = JSON.stringify(json_to_send);
+
+    console.log(json_to_send)
+    console.log("hola")
+
+    $.ajax({
+      url: 'https://pawsitivity-web-api.herokuapp.com/pets/',
+      // url: 'https://tuapp.herokuapp.com/users/login',
+      headers: {
+          'Content-Type':'application/json',
+          'Authorization': 'Bearer ' + token
+      },
+      method: 'POST',
+      dataType: 'json',
+      data: json_to_send,
+      success: function(data){
+        // guardar token en localstorage o cookie
+        alert("Pet registered!")
+        console.log('success: '+ data);
+        window.location = './catalog.html'
+      },
+      error: function(error_msg) {
+        alert((error_msg["responseText"]));
+      }
+    });
+  }
 })
 
 function loadPetTypes() {
