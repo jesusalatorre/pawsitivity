@@ -223,18 +223,30 @@ button {
   height: 100vh;
   width: 100vw;
   background-image: url('../images/dog-cover.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .signup-cover {
   height: 100vh;
   width: 100vw;
   background-image: url('../images/dog-cover2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .register-pet-cover{
   height: 100vh;
   width: 100vw;
   background-image: url('../images/register-pet.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .listings-cover{
