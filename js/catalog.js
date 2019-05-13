@@ -60,7 +60,7 @@ function loadPets() {
       for( let i = 0; i < data.length; i++) {
         // aqui va su código para agregar los elementos de la lista
         console.log(data[i])
-        loadCard(data[i].name, data[i].animalType, data[i].breed, data[i].age, data[i].specialCare, data[i].sterilization, "Monterrey", data[i].ownerEmail)
+        loadCard(data[i].name, data[i].animalType, data[i].breed, data[i].age, data[i].specialCare, data[i].sterilization, "Monterrey", data[i].ownerEmail, data[i]._id)
       }
     },
     error: function(error_msg) {
@@ -76,7 +76,7 @@ function loadCard(petName, petType, petBreed, petAge, petSpecialCare, petSterili
   <div class="pet-profile-container ${petType}-profile" >
         <div class="card text-center">
           <h4>${petName}</h4>
-          <img src="${petPicture}" alt="https://via.placeholder.com/300x200">
+          <img src="https://pawsitivity-web-api.herokuapp.com/pets/${petPicture}/pic" alt="https://via.placeholder.com/300x200">
           <p>${petType}, ${petBreed}</p>
           <button class="show-full-card button" onclick="openCard(this)" style="background:#dae9f2;">Ver detalle</button>
         </div>
@@ -84,7 +84,7 @@ function loadCard(petName, petType, petBreed, petAge, petSpecialCare, petSterili
           <div class="container">
             <div class="six columns">
               <h4>${petName}</h4>
-              <img src="${petPicture}" alt="https://via.placeholder.com/300x200">
+              <img src="https://pawsitivity-web-api.herokuapp.com/pets/${petPicture}/pic" alt="https://via.placeholder.com/300x200">
             </div>
             <div class="six columns">
               <p>Age: ${petAge}</p>
