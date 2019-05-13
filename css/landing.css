@@ -171,6 +171,11 @@ button {
   margin-right: auto;
 }
 
+.image-contain{
+  max-width: 300px;
+  max-height: 200px;
+}
+
 .catalog-logo{
   height: 70px;
   width: 70px;
